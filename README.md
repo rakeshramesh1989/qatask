@@ -16,9 +16,9 @@ Part 1 - Testing the compelete application
    It can be also installed from http://phantomjs.org/download.html
 * To execute the specs navigate to the regression specs director and execute the following command
    
-   ```
-   screenshot_dir='dir to store screenshots' test_env="dev" bundle exec rspec .
-   screenshot_dir - location to store screenshots for test steps
+   ```screenshot_dir='dir to store screenshots' test_env="dev" bundle exec rspec .```
+   
+   ```screenshot_dir - location to store screenshots for test steps
    test_env - environment to run the test against. dev= develop or local environment```
 * Executing the command mentioned above will display the results in the terminal
 
