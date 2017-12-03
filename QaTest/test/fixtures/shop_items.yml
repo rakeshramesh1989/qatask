@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: xxxx
+  name: item1
   img:  test1.com
 
 two:
-  name: icecream
+  name: item2
   img: test2.com
