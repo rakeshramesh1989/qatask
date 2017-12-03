@@ -2,11 +2,11 @@
 qa spec
 
 Part 1 - Testing the compelete application
-1)Navigate to QATest directory and start the server using the following command
+ * Navigate to QATest directory and start the server using the following command
  ```rails s```
- 2)Run the following command to populate the DB
+ * Run the following command to populate the DB
  `` bundle exec rake db:seed``
-3)Make sure application is running at 
+* Make sure application is running at 
    ```http://localhost:3000/```
 4) To test the application I have written specs using Capybara,Poltergeist webdriver and Rspec
 5) Navigate it to Regression tests directory. Bundle install the gem file using the command bundle install if already not done.
