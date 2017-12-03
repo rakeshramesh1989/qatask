@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+
+
+gem 'rspec'
+gem 'capybara'
+gem 'poltergeist'
+gem 'activesupport', '~> 3.2'
+gem 'parseconfig'
+gem 'multi_xml'
+gem 'pry'
