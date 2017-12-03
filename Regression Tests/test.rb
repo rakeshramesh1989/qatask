@@ -4,27 +4,18 @@ require_relative 'test_helper.rb'
 
 describe  "check various cases in login mode", type: :feature do
 
-  it "make a order and check if it is displayed on home page " do
+  it "all categories page should list items" do
 
-    email=generaterandomemail
-    signupuser(email)
-    @camera.takephoto('after successfull signup')
-    visit(juice_path)
-    @camera.takephoto('after juice page')
-    itemname=first('td').text
-    puts itemname
-    addeditem_id=first('a',:text=>'Add to Cart')[:href].partition("?id=").last
-    puts "item id is #{addeditem_id}"
-    first('a',:text=>'Add to Cart').click  #clicking on first item for adding to cart
-    @camera.takephoto('after clicking on iterm')
-    visit(mycart_path)
-    @camera.takephoto('my cart')
-    expect(itemname). to eql(first('td').text) #making sure item added to card and displayed on cart page are same
-    find('a.btn-success').click
-    sleep 2
-    @camera.takephoto('after making an order')
-    visit('/')
-    expect(all('td')[0].text).to eql(addeditem_id)
+    visit(allcategories_path)
+    @camera.takephoto('after categories page')
+    expect(find('h4').text).to eql('Choose one of available categories')
+    within(all('div.container')[1]) do
+      expect(all('a')[0].text).to eql('Juices')
+      expect(all('a')[1].text).to eql('Icecreams')
+      puts all('a')[0][:href]
+      expect(all('a')[0][:href]).to eql(test_config['env_url']+juice_path)
+      expect(all('a')[1][:href]).to eql(test_config['env_url']+icecream_path)
+    end
   end
 
 

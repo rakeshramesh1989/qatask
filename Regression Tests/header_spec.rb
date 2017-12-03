@@ -2,7 +2,7 @@ require_relative 'spec_helper.rb'
 require_relative 'test_helper.rb'
 
 
-describe  "check header menu option are re-directed to correct page", type: :feature do
+describe  "check navigatopm menu option on header are re-directed to correct page", type: :feature do
 
 
   it "juice" do
@@ -48,6 +48,18 @@ describe  "check header menu option are re-directed to correct page", type: :fea
     expect(page.current_path).to eql('/users/sign_up')
 
 
+  end
+
+  it "home" do
+    visit(icecream_path)
+    click_on('Home')
+    expect(page.current_path).to eql('/')
+  end
+
+  it "Qa Test OneClass" do
+    visit(icecream_path)
+    click_on('Qa Test OneClass')
+    expect(page.current_path).to eql('/')
   end
 
 end

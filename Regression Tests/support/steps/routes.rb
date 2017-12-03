@@ -21,3 +21,7 @@ end
 def mycart_path
   '/my_cart'
 end
+
+def allcategories_path
+  '/all_items'
+end 

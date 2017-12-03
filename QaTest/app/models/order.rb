@@ -31,12 +31,8 @@ class Order < ApplicationRecord
       ids   = Order.where(user_id: user.id).pluck(:code)
 
       if ids.present?
-        puts "ids value is #{ids}"
+
         item_names      = ShopItem.where(id: ids).collect{|t| t.name.humanize }
-        puts "ids value is #{ids}"
-        puts "item_names #{item_names}"
-        puts "ids length is #{ids.length}"
-        puts "ids unique is #{ids.uniq.length}"
         item_ids_uniq_c = ids.uniq.length
         item_ids_c      = ids.length
         [ item_names, item_ids_uniq_c, item_ids_c*2 ]
