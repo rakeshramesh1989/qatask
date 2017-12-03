@@ -2,7 +2,6 @@
 qa spec
 
 Part 1 - Testing the compelete application
-
 1)Navigate to QATest directory and start the server using the following command
  ```rails s```
  2)Run the following command to populate the DB
