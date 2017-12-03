@@ -19,7 +19,7 @@ Part 1 - Testing the compelete application
    ```screenshot_dir='dir to store screenshots' test_env="dev" bundle exec rspec .```
    
    ```screenshot_dir - location to store screenshots for test steps
-   test_env - environment to run the test against. dev= develop or local environment```
+   test_env - environment to run the test against. dev= develop or local environment
 * Executing the command mentioned above will display the results in the terminal
 
 
