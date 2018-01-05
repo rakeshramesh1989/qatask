@@ -24,4 +24,8 @@ end
 
 def allcategories_path
   '/all_items'
-end 
+end
+
+def raffle_path
+  '/users/raffle'
+end
