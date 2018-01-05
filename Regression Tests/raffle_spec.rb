@@ -15,7 +15,7 @@ describe  "check various use cases in raffle", type: :feature do
     puts page.has_text?('you win!')
     visit('/')
     i=0
-    while(i<5 && !page.has_text?('you win!')) do
+    while(i<5) do
       sleep 10
       visit(raffle_path)
       puts page.text
